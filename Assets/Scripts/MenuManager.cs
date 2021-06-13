@@ -8,7 +8,16 @@ public class MenuManager : MonoBehaviour
     public GameObject canvas;
     void Start()
     {
-        canvas.SetActive(false);
+        
+        if (SceneManager.GetActiveScene().name == "Menu")
+        {
+            canvas.SetActive(true);
+        }
+        else
+        {
+            canvas.SetActive(false);
+        }
+            
     }
 
     // Update is called once per frame
